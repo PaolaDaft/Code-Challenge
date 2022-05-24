@@ -52,6 +52,12 @@ describe("Tests para VisualpartnerService", () => {
             "haveCertification": false
         }
     ];
+    test("Requerimiento 1: Consultar todos los estudiantes con todos sus campos.", () => {
+        const allVisualpartners = VisualpartnerService.getAllStudents(visualpartners);
+
+        expect(allVisualpartners.length).toBe(7);
+    });
+
     test("Requerimiento 2: Consultar los emails de todos los estudiantes que tengan certificación haveCertification.", () => {
         const visualpartnersWithCertification = VisualpartnerService.getEmailsByCertification(visualpartners, true);
 
