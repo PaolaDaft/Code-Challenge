@@ -4,7 +4,7 @@ describe("Unit Tests for ExplorerService class", () => {
     test("1) Use the method getVisualpartners()", () => {
         const visualpartners = VisualpartnerController.getVisualpartners();
 
-        expect(visualpartners).toEqual(51);
+        expect(visualpartners.length).toEqual(51);
     });
 
     test("2) Use the method getEmailsByCertification()jet", () => {
