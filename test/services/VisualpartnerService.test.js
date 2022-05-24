@@ -65,7 +65,7 @@ describe("Tests para VisualpartnerService", () => {
     });
 
     test("Requerimiento 3: Consultar todos los estudiantes que tengan credits mayor a 500", () => {
-        const explorersListWithJsStack = VisualpartnerService.getVisualpartnersByCredits(visualpartners, 500);
+        const explorersListWithJsStack = VisualpartnerService.getVisualpartnersByMoreThanCredits(visualpartners, 500);
         
         expect(explorersListWithJsStack).toHaveLength(5);
     });
