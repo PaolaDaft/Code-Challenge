@@ -10,9 +10,7 @@ describe("Unit Tests for ExplorerService class", () => {
     test("2) Use the method getEmailsByCertification()jet", () => {
         const visualpartnersList = VisualpartnerController.getEmailsByCertification(true);
 
-        visualpartnersList.forEach(visualpartner => {
-            expect(visualpartner.haveCertification).toBe(true);
-        });
+        expect(visualpartnersList).toHaveLength(29);
     });
 
     test("3) Use the method getVisualpartnersByMoreThanCredits()", () => {
